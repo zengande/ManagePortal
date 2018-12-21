@@ -1,0 +1,38 @@
+.fixHeader{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 99;
+    padding: 0px;
+    height: 48px;
+    background: #F5F3F1;
+}
+.headerLeft{
+    height: 48px;
+    float: left;
+}
+.headerRight{
+    float: right;
+    line-height: 48px;
+    padding-right: 12px;
+}
+
+.headerLeft .collapse {
+    position: absolute;
+    top: 0px;
+    display: inline-block;
+    height: 48px;
+    width: 48px;
+    text-align: center;
+    line-height: 48px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    padding-top: 2px;
+}
+
+.headerLeft .logoText{
+    margin-left: 52px;
+    line-height: 48px;
+    font-weight: 600;
+}

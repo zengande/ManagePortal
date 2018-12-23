@@ -1,0 +1,56 @@
+@import "../style/colors.less";
+
+.menus_container{
+    margin: 20px 0px;
+}
+
+.menus{
+    display: inline-block
+}
+
+.menus .menu_item{
+    float: left;
+    display: inline-block;
+    width: 96px;
+    height: 96px;
+    text-align: center;
+    margin-right: 5px;
+    transition: all ease-in-out .3s;
+    color: #000000;
+}
+
+.menus .menu_item:hover{
+    background: #ffffff;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.1);
+    color: @primary-color
+}
+// .menus .menu-item:hover .menu-item-text{
+//     color: @primary-color
+// }
+.menus .menu_item:focus{
+    text-decoration: none;
+}
+
+.menus .menu_item .menu_item_icon{
+    line-height: 51px;
+    font-size: 24px;
+    font-weight: 600;
+    display: block
+}
+
+.menus .menu_item > div{
+    height: 45px;
+    font-size: 13px;
+}
+
+.menus .menu_item .menu_item_text{
+    position: relative;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-height: 36px;
+    overflow: hidden;
+    padding: 0 5px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}

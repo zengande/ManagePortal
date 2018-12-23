@@ -2,8 +2,9 @@ import * as React from 'react';
 import { Icon } from 'antd';
 import { Link } from 'react-router-dom';
 import styles from './index.css';
+import { connect } from 'dva';
 
-export default class LeftContent extends React.PureComponent<any> {
+class LeftContent extends React.PureComponent<any> {
 
     constructor(props: any) {
         super(props);
@@ -27,8 +28,19 @@ export default class LeftContent extends React.PureComponent<any> {
     }
 
     private toggle() {
-        const { collapsed, onCollapse } = this.props;
-        onCollapse(!collapsed);
+        const { collapsed, dispatch } = this.props;
+        dispatch({
+            type: 'menu/toggle',
+            payload: {
+                isCollapsed: !collapsed
+            }
+        });
         this.triggerResizeEvent();
     }
 }
+
+export default connect(
+    (state: any) => (
+        { collapsed: state.menu.drawerVisible }
+    )
+)(LeftContent)

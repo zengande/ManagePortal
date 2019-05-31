@@ -50,7 +50,7 @@ export class RightContent extends React.Component<any> {
 
     private logout() {
         const { logout, history } = this.props;
-        logout();
+        logout && logout();
         history.push('/account/login')
     }
 
